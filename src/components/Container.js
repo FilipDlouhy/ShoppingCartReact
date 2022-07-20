@@ -6,7 +6,7 @@ import {Carimg,Cars} from "./Cars"
 import { BrowserRouter as Router,Routes,Route,Link } from 'react-router-dom'
 import Contact from './Contact'
 import Car from './Car'
-import CartItem from './CartItem'
+
 import { isEditable } from '@testing-library/user-event/dist/utils'
 function Container() {
 
@@ -16,11 +16,7 @@ const [total,setTotal] = useState(0)
 const [quantity,setQuantity] = useState(0)
 
 const [carQuantity,setCarQuantity] = useState(0)
-function increment (event){
-  let index = event.target.id
 
-setCarQuantity(carQuantity+1)  
-}
 
 function showMenu(){
  
@@ -64,13 +60,23 @@ let incetment =document.querySelectorAll(".increment")
 incetment.forEach((button)=>{button.addEventListener("click",(event)=>{  Cars[event.target.id].quantity++ ;let quant =document.querySelector( `.quantity${event.target.id}`);quant.innerHTML=`Quantity ${Cars[event.target.id].quantity}`;let max=0;;Cars.map(car=>{if(car.quantity !== 0){max= max + parseInt(car.price * car.quantity); setTotal(max)}}) })});
 let decrement =document.querySelectorAll(".decrement")
 decrement.forEach((button)=>{button.addEventListener("click",(event)=>{ 
+  Cars[event.target.id].quantity-- ;
   if( Cars[event.target.id].quantity!==0)
-   {Cars[event.target.id].quantity-- ;
+   {
    let quant =document.querySelector( `.quantity${event.target.id}`);
    quant.innerHTML=`Quantity ${Cars[event.target.id].quantity}`;
    let max=0;
    ;Cars.map(car=>{if(car.quantity !== 0){max= max + parseInt(car.price * car.quantity);
-     setTotal(max)}}) }})});
+     setTotal(max)}}) }
+    else if (Cars[event.target.id].quantity===0){
+      let max=0;
+      ;Cars.map(car=>{max= max + parseInt(car.price * car.quantity);
+        setTotal(max)})
+      event.target.parentElement.remove()
+    
+    }
+    
+    })});
 
 
 
