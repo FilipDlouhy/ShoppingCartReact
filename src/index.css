@@ -1,0 +1,538 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Dangrek', cursive;
+  z-index: 100;
+}
+.container{
+  width: 100%;
+  min-height:  100%;
+
+  z-index: 1000;
+ 
+}
+nav{
+  width: 100%;
+  height: 11%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+font-size: 2rem;
+background-color: black;
+color: whitesmoke;
+
+}
+nav ul{
+  width:50%;
+  height: 100%;
+margin-right: 350px;
+  display: flex;
+align-items: center;
+justify-content: space-evenly;
+list-style-type: none;
+
+}
+.shop-logo{
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: space-around;
+  margin-right: 15px;
+  padding-bottom: 20px;
+}
+a{
+  text-decoration: none;
+  color:white
+}
+.logo-text{
+  width:20%;
+  font-size: 2rem;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+.logo-text:hover{
+cursor: pointer;
+  font-size: 2.5rem;
+color: red;
+opacity: 0.7;
+}
+nav ul li {
+  font-size:2.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+nav ul li:hover {
+  font-size:3rem;
+  opacity: 0.8;
+}
+nav img{
+  width: 70px;
+  height: 70px;
+transition: 0.4s;
+background-color: whitesmoke;
+margin-top:15px;
+padding: 10px;
+border-radius: 20px;
+cursor: pointer;
+
+
+}
+nav img:hover{
+background-color: salmon;
+opacity: 0.8;
+}
+.home{
+  height:88.9vh;
+  width: 100vw;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  position: relative;
+}
+.what-we-are{
+width: 650px;
+height: 140px;
+background-color:rgba(40, 38, 38, 0.732) ;
+font-size: 2rem;
+color: white;
+font-weight: bold;
+text-align: center;
+padding: 20px;
+border-radius: 50px;
+position: absolute;
+top: 30%;
+left: 30%;
+}
+.home-button{
+
+  background-color: rgb(0, 76, 255);
+  width: 400px;
+  height:80px;
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius:20px;
+  position: absolute;
+  left: 10%;
+  top: 60%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.home-button:hover{
+  width: 450px;
+  height:100px;
+  font-size: 1.65rem;
+  background-color: rgba(0, 76, 255, 0.693);
+}
+
+
+.shop{
+  width: 100%;
+  height: 89%;
+  display: flex;
+}
+.filter{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Dangrek', cursive;
+}
+.filter h1{
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin: 50px 0;
+}
+.filter h1 span{
+  font-size: 2rem;
+  height: 100%;
+ display: flex;
+position: absolute;
+left: 4%;
+top:14%;
+
+}
+.filter ul{
+  list-style-type: none;
+width: 80%;
+text-align: center;
+}
+.filter ul li {
+  font-size: 2rem;
+  margin: 25px 0;
+  width: 50%;
+  margin: 25px auto;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bolder;
+
+}
+.filter ul li:hover
+{
+  opacity: 0.6;
+
+}
+
+
+.filter ul li:after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width .3s;
+}
+
+.filter ul li:hover::after {
+  width: 100%;
+  transition: width .3s;
+
+}
+.cars{
+  width: 81%;
+ height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cart{
+  width: 380px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-box-shadow: -2px 6px 10px 11px rgba(0,0,0,0.59); 
+box-shadow: -2px 6px 10px 11px rgba(0,0,0,0.59);
+cursor: pointer;
+transition: 0.3s;
+color: #000;
+}
+.cart img {
+  height: 80%;
+  border-radius: 20px;
+  border: 1px solid salmon;
+}
+.cart:hover{
+  width: 400px;
+  height: 400px; 
+}
+.cart p {
+  font-size: 1.5rem;
+}
+
+.shopping-cart{
+  width: 45%;
+  min-height: 100%;
+  position: absolute;
+  right: 0%;
+  top:0;
+display: flex;
+flex-direction: column;
+align-items: center;
+z-index: 2000;
+background-color: salmon;
+display: block;
+transition: 2s;
+}
+.shopping-cart h1{
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+.shopping-cart h1 span{
+position: absolute;
+right: 10%;
+cursor: pointer;
+transition: 0.4s;
+}
+.shopping-cart h1 span:hover{
+  color:white;
+  font-size: 2.5rem;
+}
+.items{
+  width: 100%;
+  min-height: 100%;
+}
+.item{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+ border-top: 0.8px solid grey;
+ border-bottom: 0.8px solid grey;
+}
+.item img{
+  height: 90px;
+  width: 90px;
+}
+.item button {
+  background: none;
+  font-size: 4rem;
+  font-weight: bolder;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.item button:hover{
+  font-size: 4.5rem;
+  color: white;
+  
+}
+.item p{
+  font-size: 1.5rem;
+}
+.backgorund {
+  width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+
+    
+    background-color: #000000;
+    opacity:0.8;
+    display: block;
+transition: 0.4s;
+    
+
+z-index: 1000;
+}
+ .price{
+  text-align: center;
+  font-size: 2rem;
+  color: whitesmoke;
+ }
+.pay-btn{
+  width: 200px;
+  height: 50px;
+  background: turquoise;
+  border: none;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  font-size: 2rem;
+  margin-top: 20px;
+cursor: pointer;
+transition: 0.4s;
+
+
+}
+.pay-btn:hover{
+  width: 220px;
+  height: 60px;
+}
+
+.text-cart-footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact{
+  background-image: url("./components/img/contact.jpg");
+  background-size: cover;
+  width: 99.1vw;
+  min-height: 90vh;
+}
+.logos{
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.logos img {
+  width: 200px;
+  height: 150px;
+  cursor: pointer;
+transition: 0.4s;
+margin: 30px;
+}
+
+.logos img:hover{
+  width: 280px;
+  height: 230px;
+}
+.adresss{
+  font-size: 5rem;
+width: 100%;
+text-align: center;
+}
+
+
+.cartNONE{
+  width: 45%;
+  min-height: 100%;
+  position: absolute;
+ right: -100%;
+  top:0;
+display: flex;
+flex-direction: column;
+align-items: center;
+z-index: 2000;
+background-color: salmon;
+display: none;
+transition: 2s;
+}
+
+
+
+.car {
+  height: 80vh;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.car-name{
+  margin-top: 50px;
+  width: 20%;
+  font-size: 3rem;
+  font-weight: normal;
+  text-align: center;
+}
+.car-img{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.car-img img {
+  width: 600px;
+  height: 500px;
+  border: 2px solid salmon;
+  border-radius: 50px;
+}
+.car-price p {
+  font-size: 3rem;
+  color: slategrey;
+}
+.add-to-cart-btn{
+  width: 200px;
+  height: 100px;
+  border: none;
+  border-radius: 20px;
+  background-color: tomato;
+  color: whitesmoke;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.add-to-cart-btn:hover{
+  width: 220px;
+  height: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+  .logos img {
+    width: 220px;
+    height: 180px;
+    cursor: pointer;
+  transition: 0.4s;
+  margin: 30px;
+  }
+  
+  .logos img:hover{
+    width: 240px;
+    height: 200px;
+  }
+  .shopping-cart{
+    width:60%;}
+  .logo-text{
+    
+    font-size:1.5rem;
+  
+  }
+  .filter h1 span{
+
+    left: 0%;
+      
+        
+        }
+  nav ul{
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 100px;
+    justify-content: space-around;
+  }
+  nav ul li {
+    font-size:1.7rem;
+  }
+  nav img{
+    width: 50px;
+    height: 40px;
+margin-right: 50px;
+  
+  padding: 5px;
+
+  
+  
+  }
+  .what-we-are{
+
+    left:20%;
+    }
+  nav img:hover{
+    width: 70px;
+    height: 60px;
+  
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .filter h1 span{
+
+    left: 8%;
+      top: 20%;
+        
+        }
+        .car {
+      flex-direction: column;
+        }
+
+}
+@media only screen and (max-width: 730px) {.what-we-are{
+
+  left:5%;
+  }
+
+  .item img{
+    display: none;  }
+.item p{
+  font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+}
